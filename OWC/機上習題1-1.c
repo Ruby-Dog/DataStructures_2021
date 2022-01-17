@@ -2,7 +2,6 @@
 
 void printMagicSquare(int); //N階魔方陣
 
-
 int main()
 {
     printMagicSquare(1);
@@ -17,9 +16,10 @@ int main()
 void printMagicSquare(int N){ //N階魔方陣
     if(N%2==0||N==0){
         printf("請輸入正奇數");
+        return;
     }else{
 
-        int i,j;
+        int i=0,j=0;
         int k=1;
         int magicSquare[N][N];
     
@@ -28,7 +28,8 @@ void printMagicSquare(int N){ //N階魔方陣
                 magicSquare[a][b]=0;
             }
         }
-    
+        
+
     
         j=(N-1)/2;
         magicSquare[0][j]=1;
@@ -45,6 +46,8 @@ void printMagicSquare(int N){ //N階魔方陣
     
                 magicSquare[i][j]=k;   
                 
+
+                
             }else if(magicSquare[i][j]!=0){
                 
                 //--還原--
@@ -58,12 +61,15 @@ void printMagicSquare(int N){ //N階魔方陣
                 if(i>N-1) i=i-N;
                 magicSquare[i][j]=k;
                 
+                
+                
             }
             
             k=k+1;
     
         }
         
+       //----列印----// 
         for(int a=0;a<N;a++){
             for(int b=0;b<N;b++){
                 printf("%2d   ",magicSquare[a][b]);
@@ -71,8 +77,9 @@ void printMagicSquare(int N){ //N階魔方陣
             printf("\n");
             
         }
+        //-----------// 
+        
         printf("\n");
         
     }
-    
-  }
+}
