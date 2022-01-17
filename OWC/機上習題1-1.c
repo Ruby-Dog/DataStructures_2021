@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+void printMagicSquare(int); //N階魔方陣
+
+
 int main()
 {
     printMagicSquare(1);
@@ -71,4 +74,5 @@ void printMagicSquare(int N){ //N階魔方陣
         printf("\n");
         
     }
-}
+    
+  }
