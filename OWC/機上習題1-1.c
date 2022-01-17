@@ -14,8 +14,9 @@ int main()
 }
 
 void printMagicSquare(int N){ //N階魔方陣
-    if(N%2==0||N==0){
+    if(N%2==0||N<=0){
         printf("請輸入正奇數");
+        printf("\n\n");
         return;
     }else{
 
